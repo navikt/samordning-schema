@@ -7,7 +7,6 @@ node {
     try {
         cleanWs()
 
-        def version
         stage("checkout") {
             appToken = github.generateAppToken()
 
@@ -15,8 +14,6 @@ node {
             sh "git pull https://x-access-token:$appToken@github.com/navikt/samordning-schema.git"
 
             sh "make bump-version"
-
-            version = sh(script: 'cat VERSION', returnStdout: true).trim()
 
             commitHash = sh(script: 'git rev-parse HEAD', returnStdout: true).trim()
             github.commitStatus("pending", "navikt/samordning-schema", appToken, commitHash)
