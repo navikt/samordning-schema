@@ -1,0 +1,19 @@
+{
+  "topics": [{
+    "topicName": "aapen-samordning-samordningspliktigHendelse-v1",
+    "numPartitions": 1,
+    "configEntries": {
+      "retention.ms": "-1"
+    },
+    "members": [
+      {
+      "member": "srvsamordning-ut",
+      "role": "PRODUCER"
+      },
+      {
+        "member": "srvsamordning-hendelse-innlastning",
+        "role": "CONSUMER"
+      }
+    ]
+  }]
+}
