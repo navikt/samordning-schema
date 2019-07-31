@@ -5,7 +5,7 @@
   "fields": [
     {
       "name": "tpnr",
-      "type": "int"
+      "type": "string"
     },
     {
       "name": "identifikator",
