@@ -15,7 +15,7 @@ build:
 		-u $(shell id -u) \
 		-v ${HOME}/.m2:/var/maven/.m2 \
 		-e MAVEN_CONFIG=/var/maven/.m2 \
-		maven:3.5-jdk-11 mvn -Duser.home=/var/maven clean package -DskipTests=true -B -V
+		maven:3.6-jdk-12 mvn -Duser.home=/var/maven clean package -DskipTests=true -B -V
 
 bump-version:
 	@echo $$(($$(cat ./VERSION) + 1)) > ./VERSION
@@ -26,7 +26,7 @@ bump-version:
 		-u $(shell id -u) \
 		-v ${HOME}/.m2:/var/maven/.m2 \
 		-e MAVEN_CONFIG=/var/maven/.m2 \
-		maven:3.5-jdk-11 mvn -Duser.home=/var/maven versions:set -DnewVersion=$$(cat ./VERSION) -DgenerateBackupPoms=false -B -e
+		maven:3.6-jdk-12 mvn -Duser.home=/var/maven versions:set -DnewVersion=$$(cat ./VERSION) -DgenerateBackupPoms=false -B -e
 
 maven-deploy:
 	$(DOCKER) run --rm -t \
@@ -35,7 +35,7 @@ maven-deploy:
 		-u $(shell id -u) \
 		-v ${HOME}/.m2:/var/maven/.m2 \
 		-e MAVEN_CONFIG=/var/maven/.m2 \
-		maven:3.5-jdk-11 mvn -Duser.home=/var/maven deploy -B -e
+		maven:3.6-jdk-12 mvn -Duser.home=/var/maven deploy -B -e
 
 tag:
 	git add VERSION pom.xml
