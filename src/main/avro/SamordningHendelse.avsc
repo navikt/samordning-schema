@@ -4,6 +4,10 @@
   "name": "SamordningHendelse",
   "fields": [
     {
+      "name": "tpnr",
+      "type": "int"
+    },
+    {
       "name": "identifikator",
       "type": "string"
     },
