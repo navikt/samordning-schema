@@ -6,7 +6,7 @@
 
     <groupId>no.nav.samordning</groupId>
     <artifactId>samordning-schema</artifactId>
-    <version>5</version>
+    <version>6</version>
     <name>samordning schema</name>
 
     <properties>
