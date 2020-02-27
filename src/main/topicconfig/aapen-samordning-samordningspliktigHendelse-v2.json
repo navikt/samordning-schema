@@ -1,6 +1,6 @@
 {
   "topics": [{
-    "topicName": "aapen-samordning-samordningspliktigHendelse-v1",
+    "topicName": "aapen-samordning-samordningspliktigHendelse-v2",
     "numPartitions": 1,
     "configEntries": {
       "retention.ms": "-1"
