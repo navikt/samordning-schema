@@ -54,8 +54,8 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>Pensjon Samhandling Maven repo</name>
-            <url>https://maven.pkg.github.com/navikt/pensjon-samhandling-repo</url>
+            <name>GitHub navikt Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/navikt/samordning-schema</url>
             <uniqueVersion>false</uniqueVersion>
         </repository>
     </distributionManagement>
